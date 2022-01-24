@@ -4,6 +4,18 @@ class Login
 {
     private $email;
     private  $senha;
+    private $nome;
+
+    public function __construct($email, $senha, $nome)
+    {
+        $this->nome = $nome;
+        $this->setEmail($email);
+        $this->setSenha($senha);
+    }
+    public function getNome()
+    {
+        return $this->nome;
+    }
     public function getEmail()
     {
         return $this->email;
@@ -32,16 +44,8 @@ class Login
     }
 }
 
-$email = "teste@teste.com";
-$senha = "123456";
 
-$user = new Login();
-$user->setEmail($email);
-$user->setSenha($senha);
+$user = new Login("teste@teste.com", "123456", "Bruno Pereira");
 $user->Logar();
 
 // Acessando os dados pela função pegar/get
-
-
-echo "<br/>" . $user->getEmail() . "<br/>";
-echo $user->getSenha() . "<br/>";
