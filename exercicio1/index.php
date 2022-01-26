@@ -46,7 +46,7 @@
 </head>
 
 <body>
-    <form action="action/mostraDados.php">
+    <form action="action/constructor.php">
         <div class="form">
             <div class="block">
                 <label for="nome">Nome:</label><br>
